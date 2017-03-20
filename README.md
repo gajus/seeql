@@ -8,6 +8,21 @@
 
 Real-time SQL profiler.
 
+> Hello all!
+>
+> I've created SeeQL for to enable real-time debugging of applications. SeeQL is extremely handy for identifying slow queries as you navigate the application. It acts as a transparent proxy, therefore 0 changes need to be done to the code base to use it. It basically allows you to see what queries are being executed, their response time, row count, etc.
+>
+> I am looking for contributors who are equally passionate about using MySQL in Node.js to help further develop this project. I've opened a few simple issues to pick up if anyone wants to give it a shot!
+
+![Demo](https://rawgit.com/gajus/seeql/master/demo.gif)
+
+## How to use it?
+
+1. Start `seeql` and configure it to talk with the application database.
+2. Configure application to connect to `seeql` service.
+
+## CLI
+
 ```bash
 npm install seeql -g
 
@@ -22,5 +37,3 @@ Options:
   --database-user                                            [string] [required]
   --service-port                                        [number] [default: 3306]
 ```
-
-![Demo](https://rawgit.com/gajus/seeql/master/demo.gif)
