@@ -92,7 +92,7 @@ const drawTable = (drawQueries) => {
       return [
         query.connectionId,
         query.queryId,
-        formatSql(query.sql),
+        formatSql(query.sql).slice(0, 50),
         query.rows.length,
         prettyHrtime(query.executionTime)
       ];

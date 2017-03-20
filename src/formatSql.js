@@ -1,10 +1,18 @@
 // @flow
 
-import _ from 'lodash';
+import {
+  trim
+} from 'lodash';
 
 export default (sql: string): string => {
-  return _.trim(sql
+  let formattedSql: string;
+
+  formattedSql = sql
     .replace(/\n/g, ' ')
     .replace(/\t/g, ' ')
-    .replace(/ +/g, ' ')).slice(0, 50);
+    .replace(/ +/g, ' ');
+
+  formattedSql = trim(formattedSql);
+
+  return formattedSql;
 };

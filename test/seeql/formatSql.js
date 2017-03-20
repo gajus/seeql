@@ -14,3 +14,7 @@ test('replaces tabs with spaces', (t) => {
 test('replaces multiple consequent spaces with a single space', (t) => {
   t.true(formatSql('foo   bar   baz') === 'foo bar baz');
 });
+
+test('trims the SQL', (t) => {
+  t.true(formatSql('   foo    ') === 'foo');
+});
