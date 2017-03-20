@@ -5,5 +5,6 @@ import _ from 'lodash';
 export default (sql: string): string => {
   return _.trim(sql
     .replace(/\n/g, ' ')
-    .replace(/ +/, ' ')).slice(0, 50);
+    .replace(/\t/g, ' ')
+    .replace(/ +/g, ' ')).slice(0, 50);
 };
