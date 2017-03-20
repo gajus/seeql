@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "canonical",
+    "canonical/flowtype"
+  ],
+  "root": true,
+  "rules": {
+    "import/no-commonjs": 0,
+    "import/order": 0,
+    "global-require": 0
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "author": {
+    "email": "gajus@gajus.com",
+    "name": "Gajus Kuizinas",
+    "url": "http://gajus.com"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "babel-register"
+    ]
+  },
+  "bin": "./dist/index.js",
+  "dependencies": {
+    "ajv": "^4.11.5",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.7.5",
+    "debug": "^2.6.3",
+    "es6-error": "^4.0.2",
+    "lodash": "^4.17.4",
+    "mysql2": "^1.2.0",
+    "pretty-hrtime": "^1.0.3",
+    "yargs": "^7.0.2"
+  },
+  "description": "",
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-cli": "^6.24.0",
+    "babel-plugin-istanbul": "^4.0.0",
+    "babel-plugin-transform-flow-comments": "^6.22.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.2.2",
+    "babel-register": "^6.24.0",
+    "coveralls": "^2.12.0",
+    "eslint": "^3.17.1",
+    "eslint-config-canonical": "^7.1.0",
+    "flow-bin": "^0.41.0",
+    "husky": "^0.13.2",
+    "nyc": "^10.1.2",
+    "semantic-release": "^6.3.6",
+    "sinon": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=7.7"
+  },
+  "keywords": [
+    "mysql",
+    "promise",
+    "types"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "./dist/index.js",
+  "name": "seeql",
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "instrument": false,
+    "reporter": [
+      "text-lcov"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gajus/seeql"
+  },
+  "scripts": {
+    "build": "babel ./src --out-dir ./dist --copy-files --source-maps",
+    "lint": "eslint ./src ./test && flow",
+    "test": "ava --verbose"
+  },
+  "version": "1.0.0"
+}
