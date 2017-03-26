@@ -130,6 +130,10 @@ server.on('connection', (connection) => {
 
   const remote = mysql.createConnection(createDatabaseConnectionConfiguration(argv));
 
+  connection.on('error', (error) => {
+    debug('connection error', error.message);
+  });
+
   connection.on('field_list', (targetTable, fields) => {
     debug('field_list', targetTable, fields);
 
