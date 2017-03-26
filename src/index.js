@@ -147,7 +147,12 @@ server.on('connection', (connection) => {
 
     debug('received query', sql);
 
-    remote.query(sql, (queryError, rows, fields) => {
+    remote.query({
+      sql,
+      typeCast: (field) => {
+        return field.string();
+      }
+    }, (queryError, rows, fields) => {
       if (queryError) {
         throw new Error('Unexpected error.');
       }
