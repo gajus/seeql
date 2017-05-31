@@ -1,5 +1,7 @@
 # seeql
 
+<img src="logo.png" alt="logo" align="right"/>
+
 [![Travis build status](http://img.shields.io/travis/gajus/seeql/master.svg?style=flat-square)](https://travis-ci.org/gajus/seeql)
 [![Coveralls](https://img.shields.io/coveralls/gajus/seeql.svg?style=flat-square)](https://coveralls.io/github/gajus/seeql)
 [![NPM version](http://img.shields.io/npm/v/seeql.svg?style=flat-square)](https://www.npmjs.org/package/seeql)
